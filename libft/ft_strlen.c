@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
- unsigned long ft_strlen(const char *str)
+ size_t ft_strlen(const char *str)
  {
-	 unsigned long num;
+	 size_t num;
 
 	 num = 0;
 	 while(str[num] != '\n')
