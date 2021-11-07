@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int ft_isalpha(char c)
+int ft_isalpha(int c)
 {
-    if ((c <= 65 && c >= 90) || (c <= 97 && c >= 122))
+    unsigned char a;
+
+    a = (unsigned char)c;
+    if ((a >= 65 && a <= 90) || (a >= 97 && a <= 122))
         return(1);
     else
         return(0);
