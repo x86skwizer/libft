@@ -11,23 +11,26 @@ void	ft_bzero(void *s, size_t len)
 
 int	main()
 {
-	int arr[] = {1, 2, 3, 4};
+	char str[] = "Yassine";
 
 	int	intd;
 	intd = 0;
-	while (intd < 4)
-	{
-		printf(":>%d\n", arr[intd]);
-		intd++;
-	}
+	// while (intd < 4)
+	// {
+	// 	printf(":>%s\n", arr[intd]);
+	// 	intd++;
+	// }
 
-	ft_bzero(arr, 4 * sizeof(int));
+	ft_bzero(str, 4 * sizeof(char));
 	intd = 0;
-	while (intd < 4)
-	{
-		printf("test :>%d\n", arr[intd]);
-		intd++;
-	}
+	printf("test :>%s\n", str);
+	printf("test :>%s\n", str + 4);
+
+	// while (intd < 4)
+	// {
+	// 	printf("test :>%d\n", arr[intd]);
+	// 	intd++;
+	// }
 	
 	return (0);
 }
