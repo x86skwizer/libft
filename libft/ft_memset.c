@@ -15,7 +15,7 @@ void *ft_memset(void *b, int c, size_t len)
     return (str);
 }
 
-int main()
+/*int main()
 {
     char data[20];
     char dataft[20];
@@ -27,4 +27,4 @@ int main()
     printf("data   : %s\n", data);
     printf("dataft : %s\n", dataft);
     return (0);
-}
+}*/
