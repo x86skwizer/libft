@@ -13,7 +13,7 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
     i = 0;
     if (sorc && i < n)
     {
-        while (sorc[i] != '\0' && i < n)
+        while (sorc[i] != '\0' || i < n)
         {
             dest[i] = sorc[i];
             i++;
