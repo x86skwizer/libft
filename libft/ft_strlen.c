@@ -6,15 +6,15 @@
 	 size_t num;
 
 	 num = 0;
-	 while(str[num] != '\n')
+	 while(str[num] != '\0')
 		 num++;
 	return (num);
  }
  
- int	main()
+/* int	main()
 {
 	char str[] = "Yassine";
 	printf("strlen    = |%lu|\n", strlen(str));
 	printf("ft_strlen = |%lu|\n", strlen(str));
 	return (0);
-}
+}*/
