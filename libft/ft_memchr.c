@@ -18,12 +18,12 @@ void    *ft_memchr(const void *s, int c, size_t n)
            return(&str[num]);
         num++;
     }
-    return(NULL);
+    return (NULL);
 }
 
 int main()
 {
     
-    printf("%s\n", ft_memchr("yassine", 's', 6));
+    printf("%s\n", (char *)ft_memchr("yassine", 's', 6));
     return 0;
 }
