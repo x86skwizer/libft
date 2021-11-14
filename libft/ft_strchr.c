@@ -23,7 +23,7 @@
 
 int main()
 {
-    printf("%s\n", ft_strchr("Yassine", 'e'));
-    printf("%s\n",strchr("Yassine", 'e'));
+    printf("%s\n", ft_strchr(" Yas sine     ", ' '));
+    printf("%s\n",strchr(" Yas sine      ", ' '));
     return (0);
 }
