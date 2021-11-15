@@ -3,34 +3,29 @@
 
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    size_t len_haystack;
-    size_t len_needle;
-    char    *ptr;
+    size_t i;
+    size_t j;
+    char    *str;
 
-    len_haystack = 0;
-    len_needle = 0;
-	ptr = NULL;
-    if (!needle)
-		return ((char *)haystack);
-	while (haystack[len_haystack] != needle[len_needle] && len_haystack < len)
-        len_haystack++;
-    if (haystack[len_haystack] == needle[len_needle])
-    {
-    	*ptr = haystack[len_haystack];
-		while (haystack[len_haystack] == needle[len_needle])
-        {
-            len_haystack++;
-			len_needle++;
-			if (needle[len_needle] == '\0')
-				return (ptr);
+    i = 0;
+	str = (char *) haystack;
+    while (str[i] != '\0' && j < len)
+	{
+		j = 0;
+        while (str[i + j] == needle[j])
+		{
+			j++;
+			if (needle[j] == '\0')
+				return(str + i);
 		}
+        i++;
     }
 	return (NULL);
 }
 
 int main()
 {
-    char *largestring = "Foo Bar Baz";
+    char *largestring = "Bazz Bar Baz";
 	char *smallstring = "Bar";
 
 	printf("%s\n", strnstr(largestring, smallstring, 10));
