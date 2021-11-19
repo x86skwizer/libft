@@ -21,9 +21,9 @@
     return (NULL);
 }
 
-int main()
-{
-    printf("%s\n", ft_strchr(" Yas sine     ", ' '));
-    printf("%s\n",strchr(" Yas sine      ", ' '));
-    return (0);
-}
+// int main()
+// {
+//     printf("%s\n", ft_strchr(" Yas sine     ", ' '));
+//     printf("%s\n",strchr(" Yas sine      ", ' '));
+//     return (0);
+// }
