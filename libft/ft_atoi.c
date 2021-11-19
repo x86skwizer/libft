@@ -7,7 +7,7 @@ char    *ft_strchr(const char *str, int c);
 int ft_atoi(const char *str)
 {
     char	*src;
-	size_t	len;
+	unsigned int	len;
 	int num;
 	int	signe;
 
