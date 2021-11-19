@@ -10,12 +10,13 @@ char    *ft_strdup(const char *src)
 	unsigned int	num;
 
 	num = 0;
-	ptr = (char *) malloc(ft_strlen(src) * sizeof(char));
+	ptr = (char *) malloc((ft_strlen(src) + 1) * sizeof(char));
 	while (src[num] != '\0')
 	{
 		ptr[num] = src[num];
 		num++;
 	}
+	ptr[num] = '\0';
 	return (ptr);
 }
 
