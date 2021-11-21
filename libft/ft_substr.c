@@ -20,7 +20,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     if (!str)
         return (NULL);
     num = 0;
-    while (/*s[num] &&*/ num < len)
+    while (/*s[num] &&*/ num < len && start < len)
     {
         str[num] = s[start + num];
         num++;
@@ -32,6 +32,6 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 int main()
 {
     char str[15] = "Yassine Amrire";
-    printf("|%s|\n", ft_substr(str, 7, 11));
+    printf("|%s|\n", ft_substr(str, 20, 11));
     return (0);
 }
