@@ -29,9 +29,9 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     return (str);
 }
 
-int main()
+/*int main()
 {
     char str[15] = "Yassine Amrire";
     printf("|%s|\n", ft_substr(str, 20, 11));
     return (0);
-}
+}*/
