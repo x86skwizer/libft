@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 size_t ft_strlen(const char *str);
-int ft_strncmp(const char *s1, const char *s2, size_t n);
+//int ft_strncmp(const char *s1, const char *s2, size_t n);
 char    *ft_substr(char const *s, unsigned int start, size_t len);
 
 char    *ft_strtrim(char const *s1, char const *set)
@@ -32,7 +32,7 @@ char    *ft_strtrim(char const *s1, char const *set)
 
 int	main()
 {
-	char str[] = "neYassine";
+	char str[] = "neYassinene";
 	printf("%s\n", ft_strtrim(str, "ne"));
 	return (0);
 }
