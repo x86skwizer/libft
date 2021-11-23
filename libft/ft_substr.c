@@ -20,7 +20,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     if (!str)
         return (NULL);
     num = 0;
-    while (/*s[num] &&*/ num <= len && start < len)
+    while (/*s[num] &&*/ num <= len && start < ft_strlen(s))
     {
         str[num] = s[start + num];
         num++;
