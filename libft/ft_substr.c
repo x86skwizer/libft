@@ -16,11 +16,10 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     }
     else
         str = (char *) malloc((len + 1) * sizeof(char));
-    // str = (char *) malloc((ft_strlen(s) - start + 1) * sizeof(char));
     if (!str)
         return (NULL);
     num = 0;
-    while (/*s[num] &&*/ num <= len && start < ft_strlen(s))
+    while (num < len && start < ft_strlen(s))
     {
         str[num] = s[start + num];
         num++;
@@ -28,6 +27,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     str[num] = '\0';
     return (str);
 }
+
 
 /*int main()
 {
