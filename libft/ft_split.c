@@ -23,21 +23,11 @@ int     count_words(char const *s, char c)
 char **ft_split(char const *s, char c)
 {
     char    **tab;
-    // size_t  len_s;
     size_t  i;
     int     j;
     size_t  num_c;
     size_t  remember;
 
-
-    // i = 0;
-    // len_s = ft_strlen(s);
-    // while (s[i] != '\0')
-    // {
-    //     if (s[i] == c)
-    //         num_c++;
-    //     i++;
-    // }
     num_c = count_words(s, c);
     j = 0;
     tab = (char **) malloc((num_c + 1) * sizeof(char));
@@ -47,13 +37,16 @@ char **ft_split(char const *s, char c)
     {
         if (s[i] == c)
         { 
-            tab[j] = ft_substr(s, remember, i - remember);
-            // printf("%s\n", tab[j]);
+            tab[j] = ft_substr(s, remember, i - remember - 1);
+            printf("|%s|\n", tab[j]);
+			tab[j][i] = 0;
             j++;
             remember = i + 1;
         }
         i++;
     }
+    tab[j] = ft_substr(s, remember, i - remember - 1);
+	printf("|%s|\n", tab[j]);
     tab[j] = 0;
     return (tab);
 }
@@ -64,7 +57,7 @@ int     main()
     int i = 0;
 
     str = ft_split("hello it s me sboof", ' ');
-    while (str[i] != '\0')
+    while (str[i] != 0)
     {
         printf ("%s\n", str[i]);
         i++;
