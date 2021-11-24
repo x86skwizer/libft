@@ -15,7 +15,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 }
 
-int    main()
+/*int    main()
 {
     char *str;
 	int len;
@@ -30,4 +30,4 @@ int    main()
         printf("[%d]: %c\n", i, str[i]);
     return (0);
 
-}
+}*/
