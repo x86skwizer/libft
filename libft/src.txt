@@ -1,6 +1,0 @@
-linked list : https://www.youtube.com/results?search_query=neso+academy+linked+list+
-makefile :  https://elearning.intra.42.fr/notions/c-piscine-c-09-c-11/subnotions
-            https://www.youtube.com/playlist?list=PLVQYiy6xNUxw6n6q_i8wek6U7t7CeAXhU
-            http://perso.univ-lyon1.fr/jean-claude.iehl/Public/educ/Makefile.html
-
-tester   : https://github.com/alelievr/libft-unit-test
