@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 21:53:01 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 22:14:08 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/04 23:17:25 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_strchr(const char *s, int c);
 int	ft_atoi(const char *str)
 {
 	char	*src;
-	int	num;
-	int	sign;
+	int		num;
+	int		sign;
 
 	src = (char *) str;
 	num = 0;
@@ -42,8 +42,8 @@ int	ft_atoi(const char *str)
 	return (num * sign);
 }
 
-int	main()
+/*int	main()
 {
 	printf("%d\n", ft_atoi("5896"));
 	return 0;
-}
+}*/

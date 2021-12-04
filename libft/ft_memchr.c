@@ -1,29 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 23:22:16 by yamrire           #+#    #+#             */
+/*   Updated: 2021/12/04 23:26:48 by yamrire          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 
-void    *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    char    *str;
-    unsigned char alpha;
-    size_t num;
+	char			*str;
+	unsigned char	alpha;
+	size_t			num;
 
-    if (n == 0)
-        return (NULL);
-    str = (char *)s;
-    alpha = (unsigned char) c;
-    num = 0;
-    while (str[num] != '\0')
-    {
-        if (str[num] == alpha)
-           return(&str[num]);
-        num++;
-    }
-    return (NULL);
+	if (n == 0)
+		return (NULL);
+	str = (char *)s;
+	alpha = (unsigned char) c;
+	num = 0;
+	while (str[num] != '\0')
+	{
+		if (str[num] == alpha)
+			return (&str[num]);
+		num++;
+	}
+	return (NULL);
 }
 
-int main()
+/*int main()
 {
     
     printf("%s\n", (char *)ft_memchr("yassine", 's', 6));
     return 0;
-}
+}*/

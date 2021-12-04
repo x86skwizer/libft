@@ -1,24 +1,35 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 23:32:01 by yamrire           #+#    #+#             */
+/*   Updated: 2021/12/04 23:35:09 by yamrire          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-    unsigned int i;
-    unsigned char *dest;
-    unsigned char *sorc;
-    
-    dest = (unsigned char *) dst;
-    sorc = (unsigned char *) src;
+	unsigned int	i;
+	unsigned char	*dest;
+	unsigned char	*sorc;
 
-    if (!dst || !src) return NULL;
-    
-    i = 0;
-    while (i < n)
-    {
-        dest[i] = sorc[i];
-        i++;
-    }
-    return (dest);
+	dest = (unsigned char *) dst;
+	sorc = (unsigned char *) src;
+	if (!dst || !src)
+		return (NULL);
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = sorc[i];
+		i++;
+	}
+	return (dest);
 }
 
 // int	main()

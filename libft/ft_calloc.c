@@ -6,14 +6,14 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:18:03 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 22:18:06 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/04 23:20:26 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len);
+void	*ft_memset(void *b, int c, size_t len);
 
 void	*ft_calloc(size_t count, size_t size)
 {

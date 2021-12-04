@@ -6,22 +6,21 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:16:59 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 22:17:03 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/04 23:19:37 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memset(void *b, int c, size_t len);
+void	*ft_memset(void *b, int c, size_t len);
 
 void	ft_bzero(void *s, size_t len)
 {
 	ft_memset(s, 0, len);
 }
 
-
-int	main()
+/*int	main()
 {
 	char str[] = "Yassine";
 
@@ -45,4 +44,4 @@ int	main()
 	// }
 	
 	return (0);
-}
+}*/

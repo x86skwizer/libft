@@ -1,12 +1,24 @@
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
-{
-    unsigned int    i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/05 00:14:42 by yamrire           #+#    #+#             */
+/*   Updated: 2021/12/05 00:16:02 by yamrire          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        f(i, s);
-        i++;
-        s++;
-    }
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	unsigned int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, s);
+		i++;
+		s++;
+	}
 }
