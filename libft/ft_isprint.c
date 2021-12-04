@@ -1,21 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 22:28:10 by yamrire           #+#    #+#             */
+/*   Updated: 2021/12/04 22:29:36 by yamrire          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <ctype.h>
 #include <stdio.h>
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    unsigned char a;
+	unsigned char	a;
 
-    a = (unsigned char)c;
-    if (a >= 32 && a <= 127)
-        return (1);
-    else
-        return (0);
+	a = (unsigned char)c;
+	if (a >= 32 && a <= 127)
+		return (1);
+	else
+		return (0);
 }
 
-int main()
+/*int main()
 {
     int str = ' ';
     printf("isprint    : |%d|\n", isprint(str));
     printf("ft_isprint : |%d|\n", ft_isprint(str));
     return (0);
-}
+}*/

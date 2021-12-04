@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 22:30:11 by yamrire           #+#    #+#             */
+/*   Updated: 2021/12/04 22:33:14 by yamrire          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
 
 int	count_len(int n)
 {
-	int len;
-	long num;
+	int	len;
+	long	num;
 
 	len = 0;
 	if (n == 0)
@@ -25,7 +37,7 @@ int	count_len(int n)
 
 char	*ft_itoa(int n)
 {
-    char	*ptr;
+	char	*ptr;
 	long	num;
 	size_t	len;
 
@@ -43,7 +55,7 @@ char	*ft_itoa(int n)
 	}
 	ptr[len] = '\0';
 	len--;
-	while(num != 0)
+	while (num != 0)
 	{
 		ptr[len] = num % 10 + '0';
 		num /= 10;
@@ -52,9 +64,9 @@ char	*ft_itoa(int n)
 	return (ptr);
 }
 
-int	main()
+/*int	main()
 {
 	int num = 0;
 	printf("%s\n", ft_itoa(num));
 	return 0;
-}
+}*/

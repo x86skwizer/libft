@@ -1,44 +1,49 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/04 21:53:01 by yamrire           #+#    #+#             */
+/*   Updated: 2021/12/04 22:14:08 by yamrire          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 
-char    *ft_strchr(const char *str, int c);
-// size_t ft_strlen(const char *str);
+char	*ft_strchr(const char *s, int c);
 
-int ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-    char	*src;
-	unsigned int	len;
-	int num;
-	int	signe;
+	char	*src;
+	int	num;
+	int	sign;
 
 	src = (char *) str;
-	signe = 1;
 	num = 0;
 	if (!src)
 		return (num);
-	len = 0;
-	// while (src[len] == ' ' || src[len] == '\n' || src[len] == '\f' || src[len] == '\r' || src[len] == '\t' || src[len] == '\v')
-	while (ft_strchr(" \n\f\r\t\v", src[len]))
-		len++;
-	if (src[len] == '-')
+	while (ft_strchr(" \n\f\r\t\v", *src))
+		src++;
+	sign = 1;
+	if (*src == '-')
 	{
-		signe = -1;
-		len++;
+		sign = -1;
+		src++;
 	}
-	else if (src[len] == '+')
-		len++;
-	while (src[len] >= '0' && src[len] <= '9')
+	else if (*src == '+')
+		src++;
+	while (*src >= '0' && *src <= '9')
 	{
-		num = num * 10 + (src[len] - 48);
-		len++;
+		num = num * 10 + (*src - 48);
+		src++;
 	}
-	return (num * signe);
+	return (num * sign);
 }
 
 int	main()
 {
-	char len[] = "       3";
-	printf("atoi :    |%d|\n", atoi(len));
-	printf("ft_atoi : |%d|\n", ft_atoi(len));
-	return (0);
+	printf("%d\n", ft_atoi("5896"));
+	return 0;
 }
