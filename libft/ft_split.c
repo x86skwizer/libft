@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:48:54 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 23:56:56 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/05 03:29:14 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,15 +72,27 @@ int	count_words(char const *s, char c)
     return (tab);
 }*/
 
+char **free_tab (char **tab) {
+	int j = 0;
+	while (tab[j])
+		free(tab[j++]);
+	free (tab);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
 	size_t	i;
+	size_t	j;
 	int		start;
 
 	tab = (char **) malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!tab)
+		return tab;
 	i = 0;
 	start = -1;
+	j = 0;
 	while (s[i] != '\0')
 	{
 		while (s[i] == c)
@@ -90,23 +102,30 @@ char	**ft_split(char const *s, char c)
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		*tab++ = ft_substr(s, start, i - start);
+		tab[j] = ft_substr(s, start, i - start);
+		if (tab[j] == NULL)
+			return (free_tab (tab));
+		j++;
 	}
-	if (start == -1)
-		*tab++ = ft_calloc(1, sizeof(char));
-	*tab = NULL;
-	return (tab - count_words(s, c));
+	if (start == -1) {
+		tab[j] = ft_calloc(1, sizeof(char));
+		if (tab[j] == NULL)
+			return (free_tab(tab));
+		j++;
+	}
+	tab[j] = NULL;
+	return (tab);
 }
 
-/*int     main()
+int     main()
 {
     char **str;
     int i = 0;
 
-    str = ft_split("  ", ' ');
+    str = ft_split(" ", ' ');
     while (str[i] != 0)
     {
         printf ("|%s|\n", str[i]);
         i++;
     }
-}*/
+}
