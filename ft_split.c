@@ -65,6 +65,7 @@ char	**ft_split(char const *s, char c)
 		while(s[i] != c)
 			i++;
 		tab[num_b] = ft_substr(s, start, i - start);
+		
 		num_b++;
 	}
 	tab[num_b] = NULL;
@@ -77,11 +78,12 @@ int     main()
     //int i = 0;
 
     //str = ft_split("hello   wold  ", ' ');
-    size_t j = count_blocks (" rrrr.   hello.  there.    ", ' ');
-    int i = count_words (" rrrr.   hello.  there.    ", ' ');
+    size_t j = count_blocks ("   djfd dfd efed. fefe.  ", ' ');
+    int i = count_words ("   djfd dfd efed. fefe.  ", ' ');
 	printf("i = %d j = %zu\n", i, j);
 	// while (str[i] != 0)
     // {
     //     printf ("|%s|\n", str[i]);
     //     i++;
     // }
+}

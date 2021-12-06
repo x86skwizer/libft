@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:48:54 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/05 03:29:14 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/06 03:40:43 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,24 @@ int	count_words(char const *s, char c)
 	}
 	return (num_c + 1);
 }
+
+// int	count_words(char const *src, char c)
+// {
+// 	int	n;
+
+// 	n = 0;
+// 	while (*src == c)
+// 		src++;
+// 	while (*src != '\0')
+// 	{
+// 		while (*src && *src != c)
+// 			src++;
+// 		n++;
+// 		while (*src && *src == c)
+// 			src++;
+// 	}
+// 	return (n);
+// }
 /*char **ft_split(char const *s, char c)
 {
     char    **tab;
@@ -72,8 +90,11 @@ int	count_words(char const *s, char c)
     return (tab);
 }*/
 
-char **free_tab (char **tab) {
-	int j = 0;
+char	**free_tab(char **tab)
+{
+	int	j;
+
+	j = 0;
 	while (tab[j])
 		free(tab[j++]);
 	free (tab);
@@ -89,7 +110,7 @@ char	**ft_split(char const *s, char c)
 
 	tab = (char **) malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!tab)
-		return tab;
+		return (tab);
 	i = 0;
 	start = -1;
 	j = 0;
@@ -107,7 +128,8 @@ char	**ft_split(char const *s, char c)
 			return (free_tab (tab));
 		j++;
 	}
-	if (start == -1) {
+	if (start == -1)
+	{
 		tab[j] = ft_calloc(1, sizeof(char));
 		if (tab[j] == NULL)
 			return (free_tab(tab));
@@ -117,15 +139,16 @@ char	**ft_split(char const *s, char c)
 	return (tab);
 }
 
-int     main()
+/*int     main()
 {
     char **str;
     int i = 0;
-
-    str = ft_split(" ", ' ');
+	int j = count_words ("abcd bscb dfbfd dfv ", ' ');
+	printf("j = %d\n", j);
+    str = ft_split("abcd bscb dfbfd dfv ", ' ');
     while (str[i] != 0)
     {
         printf ("|%s|\n", str[i]);
         i++;
     }
-}
+}*/
