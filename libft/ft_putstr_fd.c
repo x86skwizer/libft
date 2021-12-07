@@ -6,13 +6,11 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:46:41 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 23:48:05 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 14:34:21 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar_fd(char c, int fd);
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

@@ -6,13 +6,11 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 21:53:01 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 23:17:25 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 14:20:59 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strchr(const char *s, int c);
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

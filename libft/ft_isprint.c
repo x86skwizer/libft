@@ -6,12 +6,11 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:28:10 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 22:29:36 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 14:25:38 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

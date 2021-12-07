@@ -6,14 +6,11 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:39:19 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/05 02:41:22 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 17:03:39 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-size_t	ft_strlen(const char *str);
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

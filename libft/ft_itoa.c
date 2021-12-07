@@ -6,12 +6,11 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:30:11 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 23:21:57 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 14:29:12 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 int	count_len(int n)
 {

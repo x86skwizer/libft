@@ -6,14 +6,11 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:16:59 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 23:19:37 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 14:21:38 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-void	*ft_memset(void *b, int c, size_t len);
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t len)
 {

@@ -6,12 +6,9 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 03:15:17 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/06 03:20:15 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 17:10:43 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <ctype.h>
 
 int	ft_toupper(int c)
 {

@@ -6,12 +6,11 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:18:40 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/04 22:20:57 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 14:22:47 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
