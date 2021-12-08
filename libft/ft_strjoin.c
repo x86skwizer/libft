@@ -27,7 +27,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len1 = ft_strlen(s1);
 	count1 = 0;
 	while (count1 < len1)
-		str[count1++] = s1[count1++];
+	{
+		str[count1] = s1[count1];
+		count1++;
+	}
 	count2 = 0;
 	while (count1 < len)
 		str[count1++] = s2[count2++];
