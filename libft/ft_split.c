@@ -42,6 +42,8 @@ int	count_words(char const *src, char c)
 	n = 0;
 	while (*src == c)
 		src++;
+	if (*src == '\0')
+		return (1);
 	while (*src != '\0')
 	{
 		while (*src && *src != c)
@@ -85,15 +87,22 @@ int	count_words(char const *src, char c)
     return (tab);
 }*/
 
-char	**free_tab(char **tab)
+char	**handle(char **tab, int start, size_t j)
 {
-	int	j;
+	int	i;
 
-	j = 0;
-	while (tab[j])
-		free(tab[j++]);
-	free (tab);
-	return (NULL);
+	if (start == -1)
+		tab[j++] = ft_calloc(1, sizeof(char));
+	if (tab[j] == NULL)
+	{
+		i = 0;
+		while (tab[i])
+			free (tab[i++]);
+		free (tab);
+		return (NULL);
+	}
+	tab[j] = NULL;
+	return (tab);
 }
 
 char	**ft_split(char const *s, char c)
@@ -119,26 +128,17 @@ char	**ft_split(char const *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		tab[j] = ft_substr(s, start, i - start);
-		if (tab[j] == NULL)
-			return (free_tab (tab));
-		j++;
+		if (tab[j++] == NULL)
+			return (handle(tab, start, --j));
 	}
-	if (start == -1)
-	{
-		tab[j] = ft_calloc(1, sizeof(char));
-		if (tab[j] == NULL)
-			return (free_tab(tab));
-		j++;
-	}
-	tab[j] = NULL;
-	return (tab);
+	return (handle (tab, start, j));
 }
 
 // int     main()
 // {
 //     char **str;
 //     int i = 0;
-// 	const char *s = "     ";
+// 	const char *s = "      dfdfdfgdf   ";
 // 	int j = count_words (s, ' ');
 // 	printf("j = %d\n", j);
 //     str = ft_split(s, ' ');

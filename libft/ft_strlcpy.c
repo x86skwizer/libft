@@ -6,11 +6,12 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:20:02 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/07 16:57:53 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/07 22:22:33 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dtsize)
 {
 	size_t	len;
