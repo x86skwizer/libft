@@ -6,7 +6,7 @@
 #    By: yamrire <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 12:45:27 by yamrire           #+#    #+#              #
-#    Updated: 2021/12/08 14:34:34 by yamrire          ###   ########.fr        #
+#    Updated: 2021/12/08 15:23:01 by yamrire          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,11 +48,11 @@ run:
 
 clean:
 	@ @ echo "${GREEN} deleting object files... ${NC}"
-	@ rm $(OBJECT)
+	@ rm -f $(OBJECT)
 
 fclean: clean
 	@ echo "${GREEN} libft.a ${NC}"
-	@ rm $(NAME)
+	@ rm -f $(NAME)
 
 re: fclean all 
 	@ echo "${GREEN} Hell yeah... ${NC}"
