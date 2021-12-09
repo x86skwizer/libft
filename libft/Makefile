@@ -6,7 +6,7 @@
 #    By: yamrire <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 12:45:27 by yamrire           #+#    #+#              #
-#    Updated: 2021/12/08 15:23:01 by yamrire          ###   ########.fr        #
+#    Updated: 2021/12/08 23:46:30 by yamrire          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ $(NAME) : $(OBJECT)
 	@ echo "${GREEN} DONE... ${NC}"
 
 run:
-	@ gcc libft.a main.c 
+	@ gcc libft.a main.c -g
 	@ ./a.out
 
 
