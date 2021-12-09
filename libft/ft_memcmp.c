@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -21,14 +23,21 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	len = 0;
-	while (len < n)
-	{
-		if (str1[len] == str2[len])
+	while (str1[len] == str2[len] && len < n)
 			len++;
-		else if (str1[len] - str2[len] > 0)
-			return (1);
-		else
-			return (-1);
-	}
-	return (0);
+	len--;
+	return (str1[len] - str2[len]);
+}
+
+
+int	main ()
+{
+	char *s1 = "\xff\xaa\xde\x12WXYZ";
+	char *s2 = "\xff\xaa\xde\x12MACOSX";
+	size_t size = 7;
+	int i1 = (memcmp(s1, s2, size));
+	int i2 = (ft_memcmp(s1, s2, size));
+	printf("memcmp : %d\n", i1);
+	printf("ft_memcmp : %d\n", i2);
+
 }
