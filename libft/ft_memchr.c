@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -30,12 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (&str[num]);
 		num++;
 	}
+	if (alpha == '\0' && str[num] == '\0')
+		return (&str[num]);
 	return (0);
-}
-
-int main()
-{
-    
-    printf("%s\n", (char *)ft_memchr("yassine", 's', 3));
-    return 0;
 }

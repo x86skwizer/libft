@@ -15,13 +15,11 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	len;
-	char	*str1;
-	char	*str2;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	if (!str1 || !str2)
-		return (0);
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
 	len = 0;
 	while (len < n)
 	{
@@ -34,10 +32,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*int	main()
-{
-	printf("%d\n", memcmp("xb", "abcd", 2));
-	printf("%d\n", ft_memcmp("xb", "abcd", 2));
-	return (0);
-}*/
