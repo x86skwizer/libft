@@ -20,8 +20,6 @@ char	*ft_strrchr(const char *s, int c)
 
 	alpha = (char) c;
 	str = (char *) s;
-	if (!str)
-		return (0);
 	num = ft_strlen(str);
 	while (num > 0)
 	{
@@ -30,7 +28,7 @@ char	*ft_strrchr(const char *s, int c)
 		num--;
 	}
 	if (c == '\0')
-		return ("\0");
+		return (&str[num]);
 	return (NULL);
 }
 
