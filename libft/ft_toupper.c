@@ -11,13 +11,10 @@
 /* ************************************************************************** */
 
 int	ft_toupper(int c)
-{
-	unsigned char	car;
-
-	car = (unsigned char)c;
-	if (!car)
+{ 
+	if (!c)
 		return (0);
-	else if (car >= 97 && car <= 122)
-		car -= 32;
-	return ((int)car);
+	else if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }
