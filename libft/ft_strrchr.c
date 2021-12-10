@@ -6,11 +6,13 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:39:19 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/07 17:03:39 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/10 05:05:47 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -32,9 +34,9 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 
-/*int main()
+int main()
 {
     printf("%s\n", ft_strrchr(" Yassine", 's'));
     printf("%s\n",strrchr(" Yassine", 's'));
     return (0);
-}*/
+}
