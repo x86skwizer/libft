@@ -11,29 +11,57 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	len;
+	size_t	i;
+	size_t	len_dst;
 
-	if (!dst || !src)
-		return (0);
 	len = ft_strlen(dst);
-	dstsize = dstsize + len;
-	while (len < dstsize - 1)
+	len_dst = len + ft_strlen (src);
+	dstsize -= len;
+	dstsize -= 1;
+	i = 0;
+
+	while (src[i] && i < dstsize)
 	{
-		dst[len] = src[0];
-		len++;
-		src++;
+		dst[len + i] = src[i];
+		i++;
 	}
-	return (ft_strlen(dst));
+	dst[len + i] = '\0';
+	return (len_dst);
 }
 
-/*int	main()
+int	main()
 {
-	char dest[15] = "5678" ;
-
-    printf("%lu\n", ft_strlcat(dest, "0123456789", 5));
-    printf("%s\n", dest);
-	return 0;
-}*/
+	char *str = "the cake is a lie !\0I'm hidden lol\r\n";
+	char buff1[0xF00] = "there is no stars in the sky";
+	char buff2[0xF00] = "there is no stars in the sky";
+	size_t max = strlen("the cake is a lie !\0I'm hidden lol\r\n") + 4;
+	size_t r1 = __builtin___strlcat_chk (buff1, str, max, __builtin_object_size (buff1, 2 > 1 ? 1 : 0));
+	size_t r2 = ft_strlcat(buff2, str, max);
+	printf("%lu\n", max);
+	printf("strlcat    : |%s|\n", buff1);
+	printf("ft_strlcat : |%s|\n", buff2);
+	printf("strlcat    : %lu\n", r1);
+	printf("ft_strlcat : %lu\n", r2);
+	if (r1 != r2)
+	{
+		printf("TEST_FAILED");
+		return (0);
+	}
+	printf("TEST_S");
+	return (0);
+	/*char s1[4] = "";
+	char s2[4] = "";
+	r1 = __builtin___strlcat_chk (s1, "thx to ntoniolo for this test !", 4, __builtin_object_size (s1, 2 > 1 ? 1 : 0))
+		;
+	r2 = ft_strlcat(s2, "thx to ntoniolo for this test !", 4)
+		;
+	if (r1 != r2)
+		exit(TEST_FAILED);
+	exit(TEST_SUCCESS);*/
+}

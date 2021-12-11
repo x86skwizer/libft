@@ -23,20 +23,19 @@ char	*ft_strrchr(const char *s, int c)
 	alpha = (char) c;
 	str = (char *) s;
 	num = ft_strlen(str);
-	while (num > 0)
+	if (alpha == '\0')
+		return (&str[num]);
+	while (num-- > 0)
 	{
 		if (str[num] == alpha)
 			return (&str[num]);
-		num--;
 	}
-	if (c == '\0')
-		return (&str[num]);
 	return (NULL);
 }
 
-int main()
-{
-    printf("%s\n", ft_strrchr(" Yassine", 's'));
-    printf("%s\n",strrchr(" Yassine", 's'));
-    return (0);
-}
+// int main()
+// {
+//     printf("%s\n", ft_strrchr(" Yassine", 's'));
+//     printf("%s\n",strrchr(" Yassine", 's'));
+//     return (0);
+// }
