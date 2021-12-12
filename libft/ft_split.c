@@ -105,6 +105,20 @@ char	**handle(char **tab, int start, size_t j)
 	return (tab);
 }
 
+char	**initiate(const char *s, char c, size_t *j, int *start)
+{
+	char	**tab;
+
+	if (!s)
+		return (NULL);
+	tab = (char **) malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!tab)
+		return (tab);
+	*j = 0;
+	*start = -1;
+	return (tab);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**tab;
@@ -112,12 +126,10 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	int		start;
 
-	tab = (char **) malloc((count_words(s, c) + 1) * sizeof(char *));
+	tab = initiate (s, c, &j, &start);
 	if (!tab)
-		return (tab);
+		return (NULL);
 	i = 0;
-	start = -1;
-	j = 0;
 	while (s[i] != '\0')
 	{
 		while (s[i] == c)
@@ -129,26 +141,23 @@ char	**ft_split(char const *s, char c)
 			i++;
 		tab[j] = ft_substr(s, start, i - start);
 		if (tab[j++] == NULL)
-			return (handle(tab, start, --j));
+			return (NULL);
 	}
-	return (handle (tab, start, j));
+	tab[j] = NULL;
+	return (tab);
 }
 
 // int     main()
 // {
 //     char **str;
 //     int i = 0;
-// 	const char *s = "      dfdfdfgdf   ";
-// 	int j = count_words (s, ' ');
-// 	printf("j = %d\n", j);
-//     str = ft_split(s, ' ');
-// 	int y = 0;
-//     // while (str[i] != 0)
-// 	while (y < j)
+// 	const char *s = "\0aa\0bbb";
+//     str = ft_split(s, '\0');
+// 	while (*str)
 //     {
-//         printf ("|%s|\n", str[i]);
-//         i++;
-// 		y++;
+//         printf ("|%s|\n", *str);
+// 		//printf ("%zu\n", ft_strlen(*str));
+// 		str++;
 
 //     }
 // }

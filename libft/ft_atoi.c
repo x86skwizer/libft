@@ -11,37 +11,49 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+
+void	skeep_whitepaces(char **src, int *sign)
+{
+	while (ft_strchr(" \n\f\r\t\v", **src))
+		(*src)++;
+	*sign = 1;
+	if (**src == '-')
+	{
+		*sign = -1;
+		(*src)++;
+	}
+	else if (**src == '+')
+		(*src)++;
+}
 
 int	ft_atoi(const char *str)
 {
 	char	*src;
-	int		num;
+	long	num;
 	int		sign;
 
 	src = (char *) str;
 	num = 0;
-	if (!src)
-		return (num);
-	while (ft_strchr(" \n\f\r\t\v", *src))
-		src++;
-	sign = 1;
-	if (*src == '-')
-	{
-		sign = -1;
-		src++;
-	}
-	else if (*src == '+')
-		src++;
+	skeep_whitepaces (&src, &sign);
 	while (*src >= '0' && *src <= '9')
 	{
-		num = num * 10 + (*src - 48);
+		if (num * 10 + (*src - 48) >= num)
+			num = num * 10 + (*src - 48);
+		else
+		{
+			if (sign == 1)
+				return (-1);
+			else
+				return (0);
+		}
 		src++;
 	}
 	return (num * sign);
 }
 
-/*int	main()
-{
-	printf("%d\n", ft_atoi("5896"));
-	return 0;
-}*/
+// int	main()
+// {
+// 	printf("%d\n", ft_atoi((void *)0));
+// 	return 0;
+// }
