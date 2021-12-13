@@ -39,11 +39,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[count1] = '\0';
 	return (str);
 }
-
-/*int	main()
-{
-	char str1[] = "Yassine ";
-	char str2[] = "Amrire";
-	printf("%s\n", ft_strjoin(str1, str2));
-	return (0);
-}*/
