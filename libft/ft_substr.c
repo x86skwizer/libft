@@ -37,10 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[num] = '\0';
 	return (str);
 }
-
-/*int main()
-{
-    char str[15] = "Yassine Amrire";
-    printf("|%s|\n", ft_substr(str, 20, 11));
-    return (0);
-}*/
