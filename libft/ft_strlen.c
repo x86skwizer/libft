@@ -21,11 +21,3 @@ size_t	ft_strlen(const char *str)
 		num++;
 	return (num);
 }
-
-/* int	main()
-{
-	char str[] = "Yassine";
-	printf("strlen    = |%lu|\n", strlen(str));
-	printf("ft_strlen = |%lu|\n", strlen(str));
-	return (0);
-}*/
