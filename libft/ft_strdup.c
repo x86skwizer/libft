@@ -29,12 +29,3 @@ char	*ft_strdup(const char *src)
 	ptr[num] = '\0';
 	return (ptr);
 }
-
-/*int	main()
-{
-	char *str = "yassine";
-	char *str1;
-	str1 = ft_strdup(str);
-	printf("%s\n", str1);
-	return 0;
-}*/
