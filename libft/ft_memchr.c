@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	str = (unsigned char *)s;
 	alpha = (unsigned char) c;
 	num = 0;
-	while (str[num] != '\0' && num < n)
+	while (num < n)
 	{
 		if (str[num] == alpha)
 			return (&str[num]);

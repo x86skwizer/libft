@@ -32,6 +32,8 @@ int	ft_atoi(const char *str)
 	long	num;
 	int		sign;
 
+	if (!str || !str[0])
+		return (0);
 	src = (char *) str;
 	num = 0;
 	initiate_atoi (&src, &sign);
