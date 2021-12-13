@@ -31,15 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[num] = '\0';
 	return (ptr);
 }
-
-// char ff (unsigned int i, char c) {
-// 	(void)i;
-// 	return ft_toupper (c);
-// }
-
-// int main () {
-// 	char str[] = "hello thrte sljfrlg  dgfg";
-
-// 	char *s = ft_strmapi (str, &ff);
-// 	printf("%s\n", s);
-// }
