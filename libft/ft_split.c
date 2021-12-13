@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:48:54 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/07 17:13:23 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/13 16:40:45 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	count_words(char const *src, char c)
 	return (n);
 }
 
-char	**initiate(const char *s, char c, size_t *j, int *start)
+char	**initiate_split(const char *s, char c, size_t *j, int *start)
 {
 	char	**tab;
 
@@ -53,7 +53,7 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	int		start;
 
-	tab = initiate (s, c, &j, &start);
+	tab = initiate_split (s, c, &j, &start);
 	if (!tab)
 		return (NULL);
 	i = 0;

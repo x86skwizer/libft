@@ -6,13 +6,13 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 21:53:01 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/07 14:20:59 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/13 16:41:04 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	initiate(char **src, int *sign)
+void	initiate_atoi(char **src, int *sign)
 {
 	while (ft_strchr(" \n\f\r\t\v", **src))
 		(*src)++;
@@ -34,7 +34,7 @@ int	ft_atoi(const char *str)
 
 	src = (char *) str;
 	num = 0;
-	initiate (&src, &sign);
+	initiate_atoi (&src, &sign);
 	while (*src >= '0' && *src <= '9')
 	{
 		if (num * 10 + (*src - 48) >= num)

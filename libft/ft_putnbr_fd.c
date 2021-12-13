@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:44:51 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/07 14:33:46 by yamrire          ###   ########.fr       */
+/*   Updated: 2021/12/13 16:51:13 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd (m / 10, fd);
 	ft_putchar_fd (m % 10 + '0', fd);
 }
-
