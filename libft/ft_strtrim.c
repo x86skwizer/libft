@@ -27,10 +27,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 		j--;
 	return (ft_substr(s1, i, j - i + 1));
 }
-
-/*int	main()
-{
-	char str[] = "11111111";
-	printf("%s\n", ft_strtrim(str, "123"));
-	return (0);
-}*/
