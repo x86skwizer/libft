@@ -62,10 +62,3 @@ char	*ft_itoa(int n)
 	}
 	return (ptr);
 }
-
-/*int	main()
-{
-	int num = 0;
-	printf("%s\n", ft_itoa(num));
-	return 0;
-}*/
