@@ -11,8 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -37,13 +35,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-// int main()
-// {
-//     char *largestring = "Bar Bazz Baz";
-// 	char *smallstring = "Bar";
-
-// 	printf("%s\n", strnstr(largestring, smallstring, 4));
-// 	printf("%s\n", ft_strnstr(largestring, smallstring, 4));
-//     return (0);
-// }
