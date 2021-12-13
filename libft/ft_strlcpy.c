@@ -28,11 +28,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dtsize)
 	}
 	return (ft_strlen(src));
 }
-
-/* int main(int ac , char **av)
-{
-    char dest[15] ;
-
-    printf("%lu\n", ft_strlcpy(dest, "0123456789", 5));
-    printf("%s\n", dest);
-}*/
