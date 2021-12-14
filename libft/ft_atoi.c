@@ -32,7 +32,7 @@ int	ft_atoi(const char *str)
 	long	num;
 	int		sign;
 
-	if (!str || !str[0])
+	if (!ft_strlen(str))
 		return (0);
 	src = (char *) str;
 	num = 0;
