@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yamrire <yamrire@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:41:57 by yamrire           #+#    #+#             */
 /*   Updated: 2021/12/07 17:08:50 by yamrire          ###   ########.fr       */
