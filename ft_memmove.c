@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yamrire <yamrire@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:35:56 by yamrire           #+#    #+#             */
 /*   Updated: 2021/12/09 20:26:59 by yamrire          ###   ########.fr       */
