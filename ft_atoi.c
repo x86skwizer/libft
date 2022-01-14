@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: yamrire <yamrire@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 21:53:01 by yamrire           #+#    #+#             */
 /*   Updated: 2021/12/13 16:41:04 by yamrire          ###   ########.fr       */
