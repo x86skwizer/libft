@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamrire <yamrire@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:22:16 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/09 02:14:20 by yamrire          ###   ########.fr       */
+/*   Updated: 2022/09/25 11:40:10 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
