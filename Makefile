@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yamrire <yamrire@student.1337.ma>          +#+  +:+       +#+         #
+#    By: yamrire <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 12:45:27 by yamrire           #+#    #+#              #
-#    Updated: 2021/12/08 23:46:30 by yamrire          ###   ########.fr        #
+#    Updated: 2022/10/09 07:15:37 by yamrire          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,9 @@ SRC = 	ft_atoi.c       ft_itoa.c       ft_putnbr_fd.c  ft_strlcpy.c    ft_tolowe
 		ft_isalpha.c    ft_memmove.c    ft_strdup.c     ft_strnstr.c	\
 		ft_isascii.c    ft_memset.c     ft_striteri.c   ft_strrchr.c ft_isdigit.c    ft_putchar_fd.c ft_strjoin.c    ft_strtrim.c \
 		ft_isprint.c    ft_putendl_fd.c ft_strlcat.c    ft_substr.c
+SRC_B = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c
 OBJECT = $(SRC:.c=.o)
+OBJECT_B = $(SRC_B:.c=.o)
 
 all : $(NAME)
 
@@ -29,9 +31,13 @@ $(NAME) : $(OBJECT)
 	ar rc $(NAME) $(OBJECT) 
 
 clean:
-	rm -f $(OBJECT)
+	rm -f $(OBJECT) $(OBJECT_B)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all 
+
+bonus : $(OBJECT_B)
+	$(CC) $(CFLAGS) -c $(SRC) $(SRC_B)
+	ar rc $(NAME) $(OBJECT) $(OBJECT_B)
