@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 05:59:05 by yamrire           #+#    #+#             */
-/*   Updated: 2022/10/09 06:10:44 by yamrire          ###   ########.fr       */
+/*   Updated: 2022/10/12 23:22:11 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,11 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*curr;
 
-	curr = *lst;
-	while (curr->next != NULL)
+	if (*lst == 0x00)
 	{
-		curr = curr->next;
+		*lst = new;
+		return ;
 	}
+	curr = ft_lstlast(*lst);
 	curr->next = new;
 }
