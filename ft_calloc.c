@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamrire <yamrire@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:18:03 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/07 14:22:19 by yamrire          ###   ########.fr       */
+/*   Updated: 2022/10/15 02:47:14 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (size >= SIZE_MAX || count >= SIZE_MAX)
+		return (NULL);
 	ptr = (void *) malloc(count * size);
 	if (!ptr)
 		return (NULL);
 	ft_memset(ptr, 0, size * count);
 	return (ptr);
 }
+ 
