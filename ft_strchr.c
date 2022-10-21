@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamrire <yamrire@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 00:07:30 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/07 16:51:42 by yamrire          ###   ########.fr       */
+/*   Updated: 2022/10/21 01:23:51 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strchr(const char *str, int c)
 			return (&s[num]);
 		num++;
 	}
-	if (c == '\0')
+	if (alpha == '\0')
 		return (&s[num]);
 	return (NULL);
 }
