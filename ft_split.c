@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yamrire <yamrire@student.1337.ma>          +#+  +:+       +#+        */
+/*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 23:48:54 by yamrire           #+#    #+#             */
-/*   Updated: 2021/12/13 16:40:45 by yamrire          ###   ########.fr       */
+/*   Updated: 2022/10/22 02:16:06 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	count_words(char const *src, char c)
 	while (*src == c)
 		src++;
 	if (*src == '\0')
-		return (1);
+		return (0);
 	while (*src != '\0')
 	{
 		while (*src && *src != c)
@@ -38,7 +38,7 @@ char	**initiate_split(const char *s, char c, size_t *j, int *start)
 
 	if (!s)
 		return (NULL);
-	tab = (char **) malloc((count_words(s, c) + 1) * sizeof(char *));
+	tab = (char **) ft_calloc((count_words(s, c) + 1), sizeof(char *));
 	if (!tab)
 		return (tab);
 	*j = 0;

@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/04 22:18:03 by yamrire           #+#    #+#             */
-/*   Updated: 2022/10/15 02:47:14 by yamrire          ###   ########.fr       */
+/*   Updated: 2022/10/21 03:15:40 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (size >= SIZE_MAX || count >= SIZE_MAX)
+	if (size > __INT_MAX__ || count > __INT_MAX__)
 		return (NULL);
 	ptr = (void *) malloc(count * size);
 	if (!ptr)
