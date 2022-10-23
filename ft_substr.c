@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:43:37 by yamrire           #+#    #+#             */
-/*   Updated: 2022/10/23 01:12:39 by yamrire          ###   ########.fr       */
+/*   Updated: 2022/10/23 01:19:45 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (len > ft_strlen(s) && start < ft_strlen(s))
+	if ((len > ft_strlen(s) - start) && start < ft_strlen(s))
 	{
 		len = ft_strlen(s) - start;
 		str = (char *) ft_calloc((len + 1), sizeof(char));
@@ -29,9 +29,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	}
 	else
+	{
 		str = (char *) ft_calloc((len + 1), sizeof(char));
-	if (!str)
-		return (NULL);
+		if (!str)
+			return (NULL);
+	}
 	num = 0;
 	while (num < len && start < ft_strlen(s))
 	{
