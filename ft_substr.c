@@ -6,7 +6,7 @@
 /*   By: yamrire <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/05 02:43:37 by yamrire           #+#    #+#             */
-/*   Updated: 2022/10/23 01:10:53 by yamrire          ###   ########.fr       */
+/*   Updated: 2022/10/23 01:12:39 by yamrire          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	else if (start > len)
 	{
-		return (strdup(""));
+		return (ft_strdup(""));
 	}
 	else
 		str = (char *) ft_calloc((len + 1), sizeof(char));
